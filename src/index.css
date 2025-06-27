@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Stem";
+  src: url("../src/assets/fonts/Stem-Light.otf");
+}
+
+@font-face {
+  font-family: "Stem Bold";
+  src: url("./assets/fonts/Stem-Bold.otf");
+}
+@font-face {
+  font-family: "Stem BoldItalic";
+  src: url("./assets/fonts/Stem-BoldItalic.otf");
+}
+
+@theme {
+  --font-rlight: Stem, "sans-serif";
+}
+
+@theme {
+  --font-rbold: Stem Bold, "sans-serif";
+}
+@theme {
+  --font-rbolditalic: Stem BoldItalic, "sans-serif";
+}

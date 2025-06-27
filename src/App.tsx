@@ -1,41 +1,18 @@
 import "./App.css";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import WhatIncludesSection from "./components/WhatIncludesSection";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#141414] text-white main-content">
+    <div className="min-h-screen bg-[#141414] text-white main-content font-rlight">
+      <Header />
+
       {/* Hero Section */}
-      <section className="relative px-6 py-32 overflow-hidden">
-        <div className="hero-grain absolute inset-0"></div>
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="mb-8">
-            <span className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-2 rounded-full text-sm font-semibold mb-8 float">
-              ⚡ AI-Powered Debugging Revolution
-            </span>
-          </div>
-          <h1 className="text-7xl lg:text-8xl font-black mb-8 leading-tight">
-            <span className="gradient-text">Debug smarter.</span><br/>
-            <span className="text-white">Ship faster.</span><br/>
-            <span className="text-yellow-400">Build with flow.</span>
-          </h1>
-          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            Zerobug is a cutting-edge, AI-powered, VSCode-style web debugging environment for fullstack developers. 
-            <span className="text-yellow-400 font-medium"> Visualize, simulate, and trace your backend logic</span>—fully integrated with your frontend.
-          </p>
-          <div className="flex gap-6 justify-center items-center">
-            <button className="bg-yellow-400 text-[#141414] px-12 py-6 rounded-2xl font-bold text-lg btn-modern glow-yellow hover-lift">
-              Try Zerobug Free
-            </button>
-            <button className="border-2 border-yellow-400 text-yellow-400 px-12 py-6 rounded-2xl font-bold text-lg btn-modern hover-lift">
-              Join the Waitlist
-            </button>
-          </div>
-        </div>
-        
-        {/* Floating elements */}
-        <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400 rounded-full opacity-60 float" style={{animationDelay: '0s'}}></div>
-        <div className="absolute top-40 right-20 w-6 h-6 bg-white rounded-full opacity-40 float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 left-1/4 w-3 h-3 bg-yellow-400 rounded-full opacity-50 float" style={{animationDelay: '4s'}}></div>
-      </section>
+      <HeroSection />
+
+      {/* What Includes Section */}
+      <WhatIncludesSection />
 
       {/* Demo Preview Section */}
       <section className="px-6 py-24 max-w-7xl mx-auto">
@@ -44,12 +21,18 @@ function App() {
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-transparent"></div>
             <div className="text-center z-10">
               <div className="w-24 h-24 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 glow-yellow float">
-                <svg className="w-12 h-12 text-[#141414]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
+                <svg
+                  className="w-12 h-12 text-[#141414]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold mb-2">Interactive Demo</h3>
-              <p className="text-gray-400 text-lg">Experience the future of debugging</p>
+              <p className="text-gray-400 text-lg">
+                Experience the future of debugging
+              </p>
             </div>
           </div>
         </div>
@@ -58,26 +41,82 @@ function App() {
       {/* Features Section */}
       <section className="px-6 py-24 max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-6xl font-black mb-6 gradient-text">Key Features</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Revolutionary tools that transform how you debug and develop</p>
+          <h2 className="text-6xl font-black mb-6 gradient-text">
+            Key Features
+          </h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Revolutionary tools that transform how you debug and develop
+          </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { icon: "🔄", title: "GitHub Integration", desc: "Import your project directly from GitHub using APIs. No setup needed.", color: "from-blue-400 to-blue-600" },
-            { icon: "🖥️", title: "Live Code Editing", desc: "Edit backend code directly from the browser in a VSCode-like interface.", color: "from-green-400 to-green-600" },
-            { icon: "🧠", title: "AI-Powered Node Flows", desc: "Paste your fetch chains or backend logic and get a visual node-based representation auto-generated by AI.", color: "from-purple-400 to-purple-600" },
-            { icon: "🧩", title: "Frontend + Backend State Sync", desc: "Connect your local frontend and backend apps and see real-time state, props, and backend responses.", color: "from-red-400 to-red-600" },
-            { icon: "🧪", title: "Smart Test Simulation", desc: "Simulate user flows like login/signup using actual frontend state—no more hardcoding payloads.", color: "from-yellow-400 to-yellow-600" },
-            { icon: "🔍", title: "Flow Break Detection", desc: "Instantly spot where the request breaks and get actionable fix suggestions.", color: "from-orange-400 to-orange-600" },
-            { icon: "🧬", title: "Live Route Visualization", desc: "Discover all your backend routes and map them visually with connection flows.", color: "from-cyan-400 to-cyan-600" },
-            { icon: "📋", title: "One-click Test Generation", desc: "AI creates tests based on actual user interactions and edge cases.", color: "from-pink-400 to-pink-600" },
-            { icon: "⚡", title: "Drag-and-Drop Debugging", desc: "Build flows and test them visually using an infinite canvas node-based system.", color: "from-indigo-400 to-indigo-600" }
+            {
+              icon: "🔄",
+              title: "GitHub Integration",
+              desc: "Import your project directly from GitHub using APIs. No setup needed.",
+              color: "from-blue-400 to-blue-600",
+            },
+            {
+              icon: "🖥️",
+              title: "Live Code Editing",
+              desc: "Edit backend code directly from the browser in a VSCode-like interface.",
+              color: "from-green-400 to-green-600",
+            },
+            {
+              icon: "🧠",
+              title: "AI-Powered Node Flows",
+              desc: "Paste your fetch chains or backend logic and get a visual node-based representation auto-generated by AI.",
+              color: "from-purple-400 to-purple-600",
+            },
+            {
+              icon: "🧩",
+              title: "Frontend + Backend State Sync",
+              desc: "Connect your local frontend and backend apps and see real-time state, props, and backend responses.",
+              color: "from-red-400 to-red-600",
+            },
+            {
+              icon: "🧪",
+              title: "Smart Test Simulation",
+              desc: "Simulate user flows like login/signup using actual frontend state—no more hardcoding payloads.",
+              color: "from-yellow-400 to-yellow-600",
+            },
+            {
+              icon: "🔍",
+              title: "Flow Break Detection",
+              desc: "Instantly spot where the request breaks and get actionable fix suggestions.",
+              color: "from-orange-400 to-orange-600",
+            },
+            {
+              icon: "🧬",
+              title: "Live Route Visualization",
+              desc: "Discover all your backend routes and map them visually with connection flows.",
+              color: "from-cyan-400 to-cyan-600",
+            },
+            {
+              icon: "📋",
+              title: "One-click Test Generation",
+              desc: "AI creates tests based on actual user interactions and edge cases.",
+              color: "from-pink-400 to-pink-600",
+            },
+            {
+              icon: "⚡",
+              title: "Drag-and-Drop Debugging",
+              desc: "Build flows and test them visually using an infinite canvas node-based system.",
+              color: "from-indigo-400 to-indigo-600",
+            },
           ].map((feature, i) => (
-            <div key={i} className="card-grain rounded-2xl p-8 border border-gray-700 hover-lift noise-overlay group">
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+            <div
+              key={i}
+              className="card-grain rounded-2xl p-8 border border-gray-700 hover-lift noise-overlay group"
+            >
+              <div
+                className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
+              >
                 {feature.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">{feature.title}</h3>
+              <h3 className="text-2xl font-bold mb-4 text-yellow-400">
+                {feature.title}
+              </h3>
               <p className="text-gray-300 leading-relaxed">{feature.desc}</p>
             </div>
           ))}
@@ -87,8 +126,12 @@ function App() {
       {/* Why Zerobug Section */}
       <section className="px-6 py-24 max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-6xl font-black mb-6 gradient-text">Why Zerobug?</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">The old way vs. the revolutionary way</p>
+          <h2 className="text-6xl font-black mb-6 gradient-text">
+            Why Zerobug?
+          </h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            The old way vs. the revolutionary way
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12">
           <div className="card-grain rounded-2xl p-10 border border-red-600/50 noise-overlay hover-lift">
@@ -126,7 +169,9 @@ function App() {
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
               </div>
-              <h3 className="text-3xl font-bold text-green-400">The Zerobug Way</h3>
+              <h3 className="text-3xl font-bold text-green-400">
+                The Zerobug Way
+              </h3>
             </div>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
@@ -157,29 +202,65 @@ function App() {
       {/* Testimonials Section */}
       <section className="px-6 py-24 max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-6xl font-black mb-6 gradient-text">What Developers Say</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">Real feedback from real developers</p>
+          <h2 className="text-6xl font-black mb-6 gradient-text">
+            What Developers Say
+          </h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Real feedback from real developers
+          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            { name: "Alex Chen", role: "Senior Developer", company: "Tech Corp", quote: "Zerobug revolutionized our debugging workflow. What used to take hours now takes minutes.", rating: 5 },
-            { name: "Sarah Kim", role: "Tech Lead", company: "StartupXYZ", quote: "The AI-powered node flows are game-changing. Finally, debugging feels intuitive.", rating: 5 },
-            { name: "Mike Rodriguez", role: "Full Stack Developer", company: "DevStudio", quote: "No more switching between tools. Zerobug is the unified debugging solution we needed.", rating: 5 }
+            {
+              name: "Alex Chen",
+              role: "Senior Developer",
+              company: "Tech Corp",
+              quote:
+                "Zerobug revolutionized our debugging workflow. What used to take hours now takes minutes.",
+              rating: 5,
+            },
+            {
+              name: "Sarah Kim",
+              role: "Tech Lead",
+              company: "StartupXYZ",
+              quote:
+                "The AI-powered node flows are game-changing. Finally, debugging feels intuitive.",
+              rating: 5,
+            },
+            {
+              name: "Mike Rodriguez",
+              role: "Full Stack Developer",
+              company: "DevStudio",
+              quote:
+                "No more switching between tools. Zerobug is the unified debugging solution we needed.",
+              rating: 5,
+            },
           ].map((testimonial, i) => (
-            <div key={i} className="card-grain rounded-2xl p-8 border border-gray-700 hover-lift noise-overlay">
+            <div
+              key={i}
+              className="card-grain rounded-2xl p-8 border border-gray-700 hover-lift noise-overlay"
+            >
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, j) => (
-                  <span key={j} className="text-yellow-400 text-xl">★</span>
+                  <span key={j} className="text-yellow-400 text-xl">
+                    ★
+                  </span>
                 ))}
               </div>
-              <p className="text-gray-300 mb-6 italic text-lg leading-relaxed">"{testimonial.quote}"</p>
+              <p className="text-gray-300 mb-6 italic text-lg leading-relaxed">
+                "{testimonial.quote}"
+              </p>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-[#141414] font-bold text-lg">{testimonial.name[0]}</span>
+                  <span className="text-[#141414] font-bold text-lg">
+                    {testimonial.name[0]}
+                  </span>
                 </div>
                 <div>
                   <p className="font-bold text-lg">{testimonial.name}</p>
-                  <p className="text-sm text-gray-400">{testimonial.role} at {testimonial.company}</p>
+                  <p className="text-sm text-gray-400">
+                    {testimonial.role} at {testimonial.company}
+                  </p>
                 </div>
               </div>
             </div>
@@ -191,12 +272,17 @@ function App() {
       <footer className="relative px-6 py-24 mt-24">
         <div className="hero-grain absolute inset-0"></div>
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h2 className="text-5xl font-black mb-8 gradient-text">Ready to Transform Your Debugging?</h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">Join thousands of developers who've already revolutionized their workflow</p>
+          <h2 className="text-5xl font-black mb-8 gradient-text">
+            Ready to Transform Your Debugging?
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            Join thousands of developers who've already revolutionized their
+            workflow
+          </p>
           <div className="flex justify-center mb-16">
             <div className="flex max-w-lg w-full card-grain rounded-2xl p-2 border border-gray-700">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Enter your email for early access"
                 className="flex-1 px-6 py-4 bg-transparent border-none focus:outline-none text-lg"
               />
@@ -206,7 +292,9 @@ function App() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-12">
-            <p className="text-gray-400 text-lg">© 2024 Zerobug. All rights reserved.</p>
+            <p className="text-gray-400 text-lg">
+              © 2024 Zerobug. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
