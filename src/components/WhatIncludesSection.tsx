@@ -18,7 +18,7 @@ const CustomNode = ({ data }: { data: any }) => {
         background: data.background,
         border: data.border,
         borderRadius: "1.5rem",
-        padding: "2rem",
+        padding: "1.25rem",
         backdropFilter: "blur(20px)",
         maxWidth: data.maxWidth || "350px",
         width: "100%",
@@ -47,13 +47,7 @@ const CustomNode = ({ data }: { data: any }) => {
             <img
               src={data.icon}
               alt=""
-              className="rounded-full"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-                filter: data.iconFilter || "none",
-              }}
+              className="rounded-full object-contain w-full h-full"
             />
           </div>
         )}
@@ -137,11 +131,11 @@ const WhatIncludesSection: React.FC = () => {
     {
       id: "api",
       type: "custom",
-      position: { x: 0, y: 200 },
+      position: { x: 0, y: 150 },
       data: {
         icon: "/Icons/postmanIcon.svg",
         title: "Postman-like",
-        subtitle: "Endpoint testing and monitoring",
+        subtitle: "Autofilled endpoint testing and monitoring",
         background:
           "linear-gradient(135deg, rgba(245, 101, 101, 0.1), rgba(251, 146, 60, 0.05))",
         border: "1px solid rgba(245, 101, 101, 0.3)",
@@ -153,7 +147,7 @@ const WhatIncludesSection: React.FC = () => {
     {
       id: "ai",
       type: "custom",
-      position: { x: 0, y: 400 },
+      position: { x: 0, y: 300 },
       data: {
         icon: "/Icons/aiIcon.avif",
         title: "AI Assistant",
@@ -169,7 +163,7 @@ const WhatIncludesSection: React.FC = () => {
     {
       id: "zerobug",
       type: "custom",
-      position: { x: 600, y: 200 },
+      position: { x: 600, y: 150 },
       data: {
         title: "Zerobug",
         subtitle:
@@ -232,9 +226,9 @@ const WhatIncludesSection: React.FC = () => {
 
   return (
     <section className="px-6 py-24 max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <h2 className="text-5xl lg:text-6xl font-black mb-6 gradient-text">
-          What's Inside Zerobug?
+      <div className="text-center mb-10">
+        <h2 className="text-5xl lg:text-6xl font-black pb-6 gradient-text">
+          Inspired from
         </h2>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
           Three powerful capabilities unified into one revolutionary platform
@@ -243,7 +237,7 @@ const WhatIncludesSection: React.FC = () => {
 
       <div
         style={{
-          height: "600px",
+          height: "500px",
           width: "100%",
           background: "transparent",
         }}
@@ -262,8 +256,10 @@ const WhatIncludesSection: React.FC = () => {
           zoomOnPinch={false}
           zoomOnDoubleClick={false}
           panOnDrag={false}
+          preventScrolling={false}
           style={{
             background: "transparent",
+            pointerEvents: "none",
           }}
           proOptions={{ hideAttribution: true }}
         >
