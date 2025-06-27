@@ -256,6 +256,7 @@ const WhatIncludesSection: React.FC = () => {
           zoomOnPinch={false}
           zoomOnDoubleClick={false}
           panOnDrag={false}
+          // Still not working TODO
           preventScrolling={false}
           style={{
             background: "transparent",
