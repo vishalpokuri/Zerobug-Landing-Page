@@ -118,7 +118,7 @@ const WhatIncludesSection: React.FC = () => {
       position: { x: 0, y: 0 },
       data: {
         icon: "/Icons/figmaIcon.png",
-        title: "Figma Like",
+        title: "Figma-like",
         subtitle: "Infinite canvas to see all your backend endpoints",
         background:
           "linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(99, 102, 241, 0.05))",

@@ -1,4 +1,10 @@
 function WhyZerobug() {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
   const challenges = [
     "Endless console.log() debugging sessions",
     "Switching between 5+ different tools daily",
@@ -232,6 +238,7 @@ function WhyZerobug() {
       {/* Bottom CTA */}
       <div className="text-center mt-16">
         <button
+          onClick={scrollToBottom}
           style={{
             background: "linear-gradient(135deg, #FFC107, #FF9800)",
             color: "#141414",

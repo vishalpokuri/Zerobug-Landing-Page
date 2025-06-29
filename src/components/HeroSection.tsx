@@ -1,4 +1,10 @@
 function HeroSection() {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
   return (
     <div>
       {/* Hero Section */}
@@ -51,10 +57,13 @@ function HeroSection() {
                   —fully integrated with your frontend.
                 </p>
                 <div className="flex gap-6 items-center">
-                  <button className="bg-yellow-400 text-[#141414] px-12 py-6 rounded-2xl font-bold text-lg btn-modern glow-yellow hover-lift">
+                  <button className="bg-yellow-400 text-[#141414] px-12 py-6 rounded-2xl font-bold text-lg btn-modern glow-yellow hover-lift cursor-pointer">
                     Try Zerobug Free
                   </button>
-                  <button className="border-2 border-yellow-400 text-yellow-400 px-12 py-6 rounded-2xl font-bold text-lg btn-modern hover-lift">
+                  <button
+                    className="border-2 border-yellow-400 text-yellow-400 px-12 py-6 rounded-2xl font-bold text-lg btn-modern hover-lift cursor-pointer"
+                    onClick={scrollToBottom}
+                  >
                     Join the Waitlist
                   </button>
                 </div>

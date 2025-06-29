@@ -2,18 +2,43 @@ import React, { useState, useEffect } from "react";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+
+      // Set scrolled state for styling
+      setIsScrolled(currentScrollY > 50);
+
+      // Determine visibility based on scroll direction
+      if (currentScrollY < 700) {
+        // Always show when near top
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down - hide header
+        setIsVisible(false);
+      } else {
+        // Scrolling up - show header
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
-    <header className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[65%] ">
+    <header
+      className={`
+        fixed left-1/2 transform -translate-x-1/2 z-50 w-[65%] 
+        transition-all duration-300 ease-in-out
+        ${isVisible ? "top-6 translate-y-0" : "-top-24 -translate-y-full"}
+      `}
+    >
       <div
         className={`
            transition-all duration-500 ease-out
