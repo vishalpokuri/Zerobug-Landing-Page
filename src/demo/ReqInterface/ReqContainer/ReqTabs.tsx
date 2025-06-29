@@ -1,4 +1,4 @@
-import { requestDataTypes } from "../../../types/declarations";
+import { requestDataTypes } from "../../types/declarations";
 
 interface ReqDataTypeHeaderProps {
   requestDataType: keyof typeof requestDataTypes;
@@ -6,7 +6,7 @@ interface ReqDataTypeHeaderProps {
   setActiveTab: (value: activeTabType) => void;
 }
 
-import type { activeTabType } from "../../../types/declarations";
+import type { activeTabType } from "../../types/declarations";
 
 function ReqTabs({
   requestDataType,

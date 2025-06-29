@@ -1,13 +1,10 @@
-import type { activeTabType } from "../../../types/declarations";
-import type {
-  ParsedEndpoint,
-  KeyValuePair,
-} from "../../../hooks/useRequestData";
-import type { ParameterWithType } from "../../../utils/endpointParser";
+import type { activeTabType } from "../../types/declarations";
+import type { ParsedEndpoint, KeyValuePair } from "../../hooks/useRequestData";
+import type { ParameterWithType } from "../../utils/endpointParser";
 
 type tabContentTypes = activeTabType | "headers";
 
-import type { RequestDataActions } from "../../../types/requestTypes";
+import type { RequestDataActions } from "../../types/requestTypes";
 
 interface ReqTabContentProps {
   activeTab: tabContentTypes;
@@ -68,9 +65,9 @@ function ReqTabContent({
             const paramType = getParameterType(item.key);
             const isRequired = paramType?.required;
             const isEndpointParam =
-              endpointData.paramTypes.some(p => p.name === item.key) ||
-              endpointData.queryParamTypes.some(p => p.name === item.key) ||
-              endpointData.bodyParamTypes.some(p => p.name === item.key) ||
+              endpointData.paramTypes.some((p) => p.name === item.key) ||
+              endpointData.queryParamTypes.some((p) => p.name === item.key) ||
+              endpointData.bodyParamTypes.some((p) => p.name === item.key) ||
               endpointData.headers.includes(item.key);
 
             return (
