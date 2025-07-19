@@ -57,7 +57,12 @@ function HeroSection() {
                   —fully integrated with your frontend.
                 </p>
                 <div className="flex gap-6 items-center">
-                  <button className="bg-yellow-400 text-[#141414] px-12 py-6 rounded-2xl font-bold text-lg btn-modern glow-yellow hover-lift cursor-pointer">
+                  <button
+                    className="bg-yellow-400 text-[#141414] px-12 py-6 rounded-2xl font-bold text-lg btn-modern glow-yellow hover-lift cursor-pointer"
+                    onClick={() =>
+                      window.open("https://zerobugapp.vercel.app/", "_blank")
+                    }
+                  >
                     Try Zerobug Free
                   </button>
                   <button

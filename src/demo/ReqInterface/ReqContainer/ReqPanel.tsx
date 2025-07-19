@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ReqTabs from "./ReqTabs";
 import ReqTabContent from "./ReqTabContent";
-import type { ParsedEndpoint } from "../../../hooks/useRequestData";
-import type { RequestDataActions } from "../../../types/requestTypes";
+import type { ParsedEndpoint } from "../../hooks/useRequestData";
+import type { RequestDataActions } from "../../types/requestTypes";
 
 interface ReqPanelProps {
   endpointData: ParsedEndpoint;

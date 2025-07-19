@@ -95,7 +95,12 @@ const Header: React.FC = () => {
           <button className="cursor-pointer hidden md:block text-gray-300 hover:text-white transition-colors duration-200 font-medium text-sm">
             Sign In
           </button>
-          <button className="cursor-pointer bg-yellow-400 text-[#141414] px-5 py-2 rounded-full font-bold text-sm  transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-yellow-400/30">
+          <button
+            className="cursor-pointer bg-yellow-400 text-[#141414] px-5 py-2 rounded-full font-bold text-sm  transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-yellow-400/30"
+            onClick={() =>
+              window.open("https://zerobugapp.vercel.app/", "_blank")
+            }
+          >
             Get Started
           </button>
         </div>

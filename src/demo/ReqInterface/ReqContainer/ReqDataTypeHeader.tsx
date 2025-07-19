@@ -1,4 +1,4 @@
-import { requestDataTypes } from "../../../types/declarations";
+import { requestDataTypes } from "../../types/declarations";
 
 interface ReqDataTypeHeaderProps {
   requestDataType: keyof typeof requestDataTypes;
