@@ -1,16 +1,14 @@
+import SectionHeader from "./ui/SectionHeader";
+
 function Testimonials() {
   return (
     <div>
       {" "}
       <section className="px-6 py-24 max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-6xl font-black pb-6 gradient-text">
-            What Developers Say
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Real feedback from real developers
-          </p>
-        </div>
+        <SectionHeader
+          title="What Developers Say"
+          description="Real feedback from real developers"
+        />
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {

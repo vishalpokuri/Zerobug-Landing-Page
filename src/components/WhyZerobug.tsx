@@ -1,3 +1,5 @@
+import SectionHeader from "./ui/SectionHeader";
+
 function WhyZerobug() {
   const scrollToBottom = () => {
     window.scrollTo({
@@ -25,14 +27,10 @@ function WhyZerobug() {
 
   return (
     <section className="px-6 py-24 max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <h2 className="text-5xl lg:text-6xl font-black pb-6 gradient-text">
-          Why Choose Zerobug?
-        </h2>
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          The traditional way vs. the revolutionary approach to debugging
-        </p>
-      </div>
+      <SectionHeader
+        title="Why Choose Zerobug?"
+        description="The traditional way vs. the revolutionary approach to debugging"
+      />
 
       <div className="relative">
         {/* Vertical Divider Line */}
@@ -109,10 +107,10 @@ function WhyZerobug() {
               >
                 ⚠️
               </div>
-              <h3 className="text-3xl font-bold text-red-300 mb-2">
+              <h3 className="text-xl font-bold text-red-300 mb-2">
                 Traditional Debugging
               </h3>
-              <p className="text-red-400/80 text-sm">
+              <p className="text-red-400/80 text-xs">
                 The painful reality most developers face
               </p>
             </div>
@@ -130,7 +128,7 @@ function WhyZerobug() {
                       flexShrink: 0,
                     }}
                   />
-                  <p className="text-gray-300 leading-relaxed">{challenge}</p>
+                  <p className="text-gray-300 leading-relaxed text-sm">{challenge}</p>
                 </div>
               ))}
             </div>
@@ -145,7 +143,7 @@ function WhyZerobug() {
                 textAlign: "center",
               }}
             >
-              <p className="text-red-400 font-semibold text-sm">
+              <p className="text-red-400 font-semibold text-xs">
                 Result: 70% of dev time wasted on debugging
               </p>
             </div>
@@ -191,10 +189,10 @@ function WhyZerobug() {
               >
                 ⚡
               </div>
-              <h3 className="text-3xl font-bold text-green-300 mb-2">
+              <h3 className="text-xl font-bold text-green-300 mb-2">
                 The Zerobug Revolution
               </h3>
-              <p className="text-green-400/80 text-sm">
+              <p className="text-green-400/80 text-xs">
                 How modern debugging should work
               </p>
             </div>
@@ -212,7 +210,7 @@ function WhyZerobug() {
                       flexShrink: 0,
                     }}
                   />
-                  <p className="text-gray-300 leading-relaxed">{solution}</p>
+                  <p className="text-gray-300 leading-relaxed text-sm">{solution}</p>
                 </div>
               ))}
             </div>
@@ -227,7 +225,7 @@ function WhyZerobug() {
                 textAlign: "center",
               }}
             >
-              <p className="text-green-400 font-semibold text-sm">
+              <p className="text-green-400 font-semibold text-xs">
                 Result: 10x faster debugging & development
               </p>
             </div>
@@ -245,7 +243,7 @@ function WhyZerobug() {
             border: "none",
             borderRadius: "1rem",
             padding: "1rem 2.5rem",
-            fontSize: "1.2rem",
+            fontSize: "1rem",
             fontWeight: "bold",
             cursor: "pointer",
             transition: "all 0.3s ease",

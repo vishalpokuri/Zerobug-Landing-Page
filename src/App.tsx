@@ -1,5 +1,5 @@
 import "./App.css";
-import DemoCanvas from "./demo/DemoCanvas";
+import DemoCanvas from "./components/DemoCanvas";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";

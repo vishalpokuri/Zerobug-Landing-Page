@@ -15,15 +15,16 @@ import {
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 
-import { CustomNode } from "./CustomNode";
-import { BufferNode } from "./BufferNode";
+import { CustomNode } from "../demo/CustomNode";
+import { BufferNode } from "../demo/BufferNode";
 import {
   mockEndpoints,
   parseEndpointsToTree,
   treeToFlowNodes,
-} from "./utils/endpointParser";
+} from "../demo/utils/endpointParser";
 
-import { getNodeColor } from "./utils/utilityFunctions";
+import { getNodeColor } from "../demo/utils/utilityFunctions";
+import SectionHeader from "./ui/SectionHeader";
 
 // Node types configuration
 const nodeTypes = {
@@ -50,14 +51,10 @@ function DemoCanvas() {
 
   return (
     <>
-      <div className="text-center mb-10">
-        <h2 className="text-5xl lg:text-6xl font-black pb-6 gradient-text">
-          Interactive Demo
-        </h2>
-        <div className="text-xl text-gray-400 min-w-full justify-center flex flex-row items-center gap-4">
-          <p> ⚠️ Demo preview only - Full app launching soon</p>
-        </div>
-      </div>
+      <SectionHeader
+        title="Interactive Demo"
+        description="⚠️ Demo preview only - Full app launching soon"
+      />
       <div className="h-[80vh] w-[80vw] bg-[#141414] justify-self-center rounded-xl border-[#262626] border-2">
         <ReactFlow
           nodes={nodes}

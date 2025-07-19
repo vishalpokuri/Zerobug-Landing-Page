@@ -40,14 +40,14 @@ function HeroSection() {
                     ⚡ AI-Powered Debugging Revolution
                   </span>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-black mb-8 leading-tight font-rbold uppercase">
+                <h1 className="text-4xl lg:text-5xl font-black mb-8 leading-tight font-rbold uppercase">
                   <span className="gradient-text ">We let you trace</span>
                   <br />
                   <span className="text-white">you fix with grace</span>
                   <br />
                   {/* <span className="text-yellow-400">Build with flow.</span> */}
                 </h1>
-                <p className="text-xl text-gray-300 mb-12 max-w-3xl leading-relaxed font-light">
+                <p className="text-lg text-gray-300 mb-12 max-w-2xl leading-relaxed font-light">
                   A cutting-edge, AI-powered debugging environment for fullstack
                   developers.
                   <span className="text-yellow-400 font-medium">
@@ -58,7 +58,7 @@ function HeroSection() {
                 </p>
                 <div className="flex gap-6 items-center">
                   <button
-                    className="bg-yellow-400 text-[#141414] px-12 py-6 rounded-2xl font-bold text-lg btn-modern glow-yellow hover-lift cursor-pointer"
+                    className="bg-yellow-400 text-[#141414] px-10 py-5 rounded-2xl font-bold text-sm btn-modern glow-yellow hover-lift cursor-pointer"
                     onClick={() =>
                       window.open("https://zerobugapp.vercel.app/", "_blank")
                     }
@@ -66,11 +66,37 @@ function HeroSection() {
                     Try Zerobug Free
                   </button>
                   <button
-                    className="border-2 border-yellow-400 text-yellow-400 px-12 py-6 rounded-2xl font-bold text-lg btn-modern hover-lift cursor-pointer"
+                    className="border-2 border-yellow-400 text-yellow-400 px-10 py-5 rounded-2xl font-bold text-sm btn-modern hover-lift cursor-pointer"
                     onClick={scrollToBottom}
                   >
                     Join the Waitlist
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Terminal interface - positioned absolutely within hero section */}
+        <div className="absolute right-10 top-1/2 transform -translate-y-1/2 w-[35%] pr-20 flex justify-end z-30">
+          <div className="w-full max-w-md">
+            <div className="bg-[#1a1a1a] border border-[#333] rounded-lg overflow-hidden shadow-2xl">
+              {/* Terminal header */}
+              <div className="bg-[#2d2d2d] px-4 py-3 flex items-center gap-2 border-b border-[#333]">
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+              </div>
+
+              {/* Terminal content */}
+              <div className="p-4 font-mono text-sm">
+                <div className="my-2">
+                  <span className="text-gray-500">$</span>
+                  <span className="text-white ml-2 ">
+                    npm install -g zerobug-cli
+                  </span>
                 </div>
               </div>
             </div>

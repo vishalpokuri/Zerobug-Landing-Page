@@ -1,3 +1,5 @@
+import SectionHeader from "./ui/SectionHeader";
+
 function KeyFeatures() {
   const features = [
     {
@@ -48,15 +50,11 @@ function KeyFeatures() {
   ];
 
   return (
-    <section className="px-6 py-24 max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <h2 className="text-5xl lg:text-6xl font-black mb-6 gradient-text">
-          Key Features
-        </h2>
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          Revolutionary tools that transform how you debug and develop
-        </p>
-      </div>
+    <section className="px-6 py-24 max-w-6xl mx-auto">
+      <SectionHeader
+        title="Key Features"
+        description="Revolutionary tools that transform how you debug and develop"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {features.map((feature, i) => (
@@ -140,7 +138,7 @@ function KeyFeatures() {
             >
               <h3
                 style={{
-                  fontSize: "1.75rem",
+                  fontSize: "1.5rem",
                   fontWeight: "bold",
                   color: "#FFC107",
                   marginBottom: "0.75rem",
@@ -154,7 +152,7 @@ function KeyFeatures() {
               <p
                 style={{
                   color: "#E5E7EB",
-                  fontSize: "1rem",
+                  fontSize: "0.875rem",
                   lineHeight: "1.5",
                   textShadow:
                     "0 2px 4px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.6)",

@@ -9,7 +9,7 @@ import {
   Handle,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-
+import SectionHeader from "./ui/SectionHeader";
 // Custom Node Component
 const CustomNode = ({ data }: { data: any }) => {
   return (
@@ -32,10 +32,10 @@ const CustomNode = ({ data }: { data: any }) => {
         {data.icon != null && (
           <div
             style={{
-              minWidth: "60px",
-              minHeight: "60px",
-              width: "70px",
-              height: "70px",
+              minWidth: "50px",
+              minHeight: "50px",
+              width: "60px",
+              height: "60px",
               borderRadius: "1rem",
               display: "flex",
               alignItems: "center",
@@ -54,7 +54,7 @@ const CustomNode = ({ data }: { data: any }) => {
         <div>
           <h3
             style={{
-              fontSize: data.titleSize || "1.25rem",
+              fontSize: data.titleSize || "1rem",
               fontWeight: "bold",
               color: "white",
               marginBottom: "0.5rem",
@@ -65,7 +65,7 @@ const CustomNode = ({ data }: { data: any }) => {
           <p
             style={{
               color: data.subtitleColor || "#9CA3AF",
-              fontSize: data.subtitleSize || "0.875rem",
+              fontSize: data.subtitleSize || "0.85rem",
               maxWidth: data.subtitleMaxWidth || "auto",
             }}
           >
@@ -171,9 +171,9 @@ const WhatIncludesSection: React.FC = () => {
         background:
           "linear-gradient(135deg, rgba(255, 204, 0, 0.2), rgba(255, 193, 7, 0.1))",
         border: "2px solid rgba(255, 204, 0, 0.6)",
-        titleSize: "2rem",
+        titleSize: "1.5rem",
         subtitleColor: "#D1D5DB",
-        subtitleSize: "1.1rem",
+        subtitleSize: "0.9rem",
         maxWidth: "450px",
         boxShadow: "0 0 60px rgba(255, 204, 0, 0.3)",
         hoverShadow: "0 0 80px rgba(255, 204, 0, 0.4)",
@@ -226,14 +226,10 @@ const WhatIncludesSection: React.FC = () => {
 
   return (
     <section className="px-6 py-24 max-w-7xl mx-auto">
-      <div className="text-center mb-10">
-        <h2 className="text-5xl lg:text-6xl font-black pb-6 gradient-text">
-          Inspired from
-        </h2>
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          Three powerful capabilities unified into one revolutionary platform
-        </p>
-      </div>
+      <SectionHeader
+        title="Inspired from"
+        description="Three powerful capabilities unified into one revolutionary platform"
+      />
 
       <div
         style={{
