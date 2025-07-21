@@ -60,7 +60,7 @@ function HeroSection() {
                   <button
                     className="bg-yellow-400 text-[#141414] px-10 py-5 rounded-2xl font-bold text-sm btn-modern glow-yellow hover-lift cursor-pointer"
                     onClick={() =>
-                      window.open("https://zerobugapp.vercel.app/", "_blank")
+                      window.open("https://app.zerobug.tech/", "_blank")
                     }
                   >
                     Try Zerobug Free
