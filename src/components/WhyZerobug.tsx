@@ -1,9 +1,9 @@
 import SectionHeader from "./ui/SectionHeader";
 
 function WhyZerobug() {
-  const scrollToBottom = () => {
+  const scrollToTop = () => {
     window.scrollTo({
-      top: document.documentElement.scrollHeight,
+      top: -document.documentElement.scrollHeight,
       behavior: "smooth",
     });
   };
@@ -128,7 +128,9 @@ function WhyZerobug() {
                       flexShrink: 0,
                     }}
                   />
-                  <p className="text-gray-300 leading-relaxed text-sm">{challenge}</p>
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    {challenge}
+                  </p>
                 </div>
               ))}
             </div>
@@ -210,7 +212,9 @@ function WhyZerobug() {
                       flexShrink: 0,
                     }}
                   />
-                  <p className="text-gray-300 leading-relaxed text-sm">{solution}</p>
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    {solution}
+                  </p>
                 </div>
               ))}
             </div>
@@ -236,7 +240,7 @@ function WhyZerobug() {
       {/* Bottom CTA */}
       <div className="text-center mt-16">
         <button
-          onClick={scrollToBottom}
+          onClick={scrollToTop}
           style={{
             background: "linear-gradient(135deg, #FFC107, #FF9800)",
             color: "#141414",
