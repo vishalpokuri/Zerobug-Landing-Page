@@ -89,7 +89,7 @@ function StickyKeyFeatures() {
             key={index}
             ref={(el) => setFeatureRef(el, index)}
             data-feature-index={index}
-            className="h-screen flex items-center relative"
+            className="h-screen flex items-center relative border-t border-b border-[#262626]"
             style={{
               scrollSnapAlign: "start",
               scrollSnapStop: "always",
@@ -102,10 +102,6 @@ function StickyKeyFeatures() {
                   <div
                     className="text-6xl mb-6 opacity-80 transform transition-all duration-700 ease-out"
                     style={{
-                      transform:
-                        activeFeature === index
-                          ? "translateY(0) scale(1)"
-                          : "translateY(20px) scale(0.9)",
                       opacity: activeFeature === index ? 0.8 : 0.4,
                     }}
                   >
@@ -143,24 +139,16 @@ function StickyKeyFeatures() {
                   )}
 
                   <h3
-                    className="text-3xl font-bold text-[#FFC107] mb-6 leading-tight transform transition-all duration-700 ease-out delay-100"
+                    className="text-3xl font-bold text-[#FFC107] mb-6 leading-tight transition-all duration-700 ease-out delay-100"
                     style={{
-                      transform:
-                        activeFeature === index
-                          ? "translateY(0)"
-                          : "translateY(20px)",
                       opacity: activeFeature === index ? 1 : 0.3,
                     }}
                   >
                     {feature.title}
                   </h3>
                   <p
-                    className="text-gray-300 text-lg leading-relaxed transform transition-all duration-700 ease-out delay-200"
+                    className="text-gray-300 text-lg leading-relaxed transition-all duration-700 ease-out delay-200"
                     style={{
-                      transform:
-                        activeFeature === index
-                          ? "translateY(0)"
-                          : "translateY(20px)",
                       opacity: activeFeature === index ? 1 : 0.3,
                     }}
                   >

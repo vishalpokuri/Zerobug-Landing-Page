@@ -15,8 +15,20 @@ function Footer() {
     }
   };
   return (
-    <footer className="relative px-6 py-24 mt-24">
+    <footer
+      className="relative px-6 py-24 mt-24"
+      style={{
+        backgroundImage: "url(/Spectral.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="hero-grain absolute inset-0"></div>
+      {/* Gradient fade from bg color to transparent */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#141414] via-[#141414]/60 to-transparent"></div>
+      {/* Optional dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20"></div>
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <h2 className="text-5xl font-black pb-8 gradient-text">
           Ready to Transform Your Debugging?
@@ -24,7 +36,7 @@ function Footer() {
         <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
           Join Zerobug and starting saving hours of time weekly
         </p>
-        <div className="flex justify-center mb-16">
+        {/* <div className="flex justify-center mb-16">
           {!isSubmitted ? (
             <form
               onSubmit={handleSubmit}
@@ -96,7 +108,7 @@ function Footer() {
                 `}
               </style>
 
-              {/* Diagonal Shine Effect */}
+
               <div
                 style={{
                   position: "absolute",
@@ -136,7 +148,13 @@ function Footer() {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
+        <button
+          type="submit"
+          className="bg-yellow-400 text-[#141414] px-8 py-4 rounded-xl font-bold text-lg btn-modern glow-yellow cursor-pointer hover:scale-105 transition-transform mb-8"
+        >
+          Get started
+        </button>
         <div className="border-t border-gray-800 pt-12">
           <p className="text-gray-400 text-lg">
             © 2025 Zerobug. All rights reserved.
