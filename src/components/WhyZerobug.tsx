@@ -1,12 +1,6 @@
 import SectionHeader from "./ui/SectionHeader";
 
 function WhyZerobug() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: -document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
-  };
   const challenges = [
     "Endless console.log() debugging sessions",
     "Switching between 5+ different tools daily",
@@ -235,35 +229,6 @@ function WhyZerobug() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Bottom CTA */}
-      <div className="text-center mt-16">
-        <button
-          onClick={scrollToTop}
-          style={{
-            background: "linear-gradient(135deg, #FFC107, #FF9800)",
-            color: "#141414",
-            border: "none",
-            borderRadius: "1rem",
-            padding: "1rem 2.5rem",
-            fontSize: "1rem",
-            fontWeight: "bold",
-            cursor: "pointer",
-            transition: "all 0.3s ease",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "translateY(-2px) scale(1.05)";
-            e.currentTarget.style.boxShadow =
-              "0 10px 30px rgba(255, 204, 0, 0.4)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "translateY(0) scale(1)";
-            e.currentTarget.style.boxShadow = "none";
-          }}
-        >
-          Make the Switch to Zerobug Today
-        </button>
       </div>
     </section>
   );

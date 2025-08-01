@@ -1,24 +1,9 @@
-import { useState } from "react";
-
 function Footer() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (form.name.trim() && form.email.trim()) {
-      // Here you would typically send the data to your backend
-      setIsSubmitted(true);
-    }
-  };
   return (
     <footer
       className="relative px-6 py-24 mt-24"
       style={{
-        backgroundImage: "url(/Spectral.jpg)",
+        backgroundImage: "url(/Spectral2.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
