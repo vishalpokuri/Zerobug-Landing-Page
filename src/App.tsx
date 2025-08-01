@@ -3,7 +3,7 @@ import DemoCanvas from "./components/DemoCanvas";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
-import KeyFeatures from "./components/KeyFeatures";
+import StickyKeyFeatures from "./components/StickyKeyFeatures";
 import Testimonials from "./components/Testimonials";
 import WhatIncludesSection from "./components/WhatIncludesSection";
 import WhyZerobug from "./components/WhyZerobug";
@@ -22,7 +22,7 @@ function App() {
       {/* Demo Preview Section */}
       <DemoCanvas />
       {/* Key features section */}
-      <KeyFeatures />
+      <StickyKeyFeatures />
 
       {/* Why Zerobug Section */}
       <WhyZerobug />

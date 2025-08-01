@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Smooth scroll behavior for the entire document */
+html {
+  scroll-behavior: smooth;
+  /* 
+   * SCROLL SNAP SENSITIVITY:
+   * y mandatory = strict snapping (more aggressive)
+   * y proximity = gentle snapping (less aggressive)
+   */
+  scroll-snap-type: y proximity;
+}
+
 @font-face {
   font-family: "Stem";
   src: url("../src/assets/fonts/Stem-Light.otf");

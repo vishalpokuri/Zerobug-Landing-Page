@@ -53,7 +53,7 @@ function DemoCanvas() {
     <>
       <SectionHeader
         title="Interactive Demo"
-        description="⚠️ Demo preview only - Full app launching soon"
+        description="⚠️ Demo preview only"
       />
       <div className="h-[80vh] w-[80vw] bg-[#141414] justify-self-center rounded-xl border-[#262626] border-2">
         <ReactFlow
